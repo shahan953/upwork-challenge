@@ -1,0 +1,71 @@
+.w-47{
+    width: 47%;
+    display: inline-block;
+}
+.las{
+    margin-left: 6%;
+}
+.control-label{    
+    font-size: 1rem;
+    color: $primary;
+    background-color: #fff;
+    margin: 0;
+    height: 36px;
+    width: 5%;
+    text-align: center;
+    line-height: 35px;
+}
+.form-control{
+    display: inline-block !important;
+    width: 95%;
+    border: none;
+    outline: 0px;
+    box-shadow: none;
+    font-size: 1rem !important;
+    border-radius: 0;
+}
+.form-control:focus{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background: #fff;
+}
+.form-group{
+    border: 1px solid $primary;
+    margin-bottom: 35px;
+}
+.from-wrapper h5{
+    margin: 40px 0px 25px;
+}
+.from-btn{
+    background-color: $primary;
+    padding: .5rem 2rem;
+    color: $white !important;
+}
+.from-btn:hover{
+    background-color: rgba(99, 99, 253, 0.966);
+    color: #fff;
+}
+.from-btn i{
+    display: inline-block;
+    color: #8a8aff;
+    background-color: #fff;
+    padding: 6px;
+    border-radius: 50%;
+    margin-left: .7rem;
+    font-size: 15px;
+    height: 27px;
+    width: 27px;
+}
+.mr i{
+    margin: 0 0.7rem 0 0 !important;
+}
+.form-lm{
+    margin-bottom: 20px;
+}
+.inline-icon{
+    width: 15% !important;
+}
+.inline-input{
+    width: 85% !important;
+}
