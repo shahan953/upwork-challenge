@@ -30,8 +30,8 @@ class Auth extends React.Component {
   onSubmit = (e) => {
     e.preventDefault();
     const { email, password } = this.state;
-    if(email && password) {
-      this.props.LocalAuthentication({email, password})
+    if (email && password) {
+      this.props.LocalAuthentication({ email, password })
     } else {
       alert("Email & Password cannot be empty")
     }
@@ -67,8 +67,8 @@ class Auth extends React.Component {
       >
         <div id="AuthModal" className={classes.paper}>
           <AppBar position="static" className={classes.tabs}>
-            <Tabs 
-              value={this.state.accountType} 
+            <Tabs
+              value={this.state.accountType}
               onChange={this.handleChange}
             >
               <Tab label="Buyer" value="Buyer" />
@@ -81,47 +81,47 @@ class Auth extends React.Component {
                 <h3 className="text-center">Login as {this.state.accountType}</h3>
               </div>
               <form onSubmit={this.onSubmit}>
-              <div className="my-4">
-                <Input
-                  placeholder="Email"
-                  className="d-block mt-3"
-                  name="email"
-                  onChange={this.onChange}
-                  required
-                />
-                <Input
-                  placeholder="Password"
-                  className="d-block mt-3"
-                  name="password"
-                  onChange={this.onChange}
-                  required
-                />
-              </div>
-              <div className="d-flex align-items-center justify-content-between mb-4">
-                <div className="d-flex align-items-center">
-                  <Checkbox
-                    id="Remember"
-                    className="p-0 mr-2"
-                    style={{color: 'purple'}}
-                    name="remember"
-                    onChange={this.onRememberMe}
+                <div className="my-4">
+                  <Input
+                    placeholder="Email"
+                    className="d-block mt-3"
+                    name="email"
+                    onChange={this.onChange}
+                    required
                   />
-                  <FormLabel
-                    htmlFor="Remember"
-                    className="m-0"
-                  >
-                    Remember Me
-                  </FormLabel>
+                  <Input
+                    placeholder="Password"
+                    className="d-block mt-3"
+                    name="password"
+                    onChange={this.onChange}
+                    required
+                  />
                 </div>
-                <Link to="/forget-password">Forget Password?</Link>
-              </div>
+                <div className="d-flex align-items-center justify-content-between mb-4">
+                  <div className="d-flex align-items-center">
+                    <Checkbox
+                      id="Remember"
+                      className="p-0 mr-2"
+                      style={{ color: 'purple' }}
+                      name="remember"
+                      onChange={this.onRememberMe}
+                    />
+                    <FormLabel
+                      htmlFor="Remember"
+                      className="m-0"
+                    >
+                      Remember Me
+                    </FormLabel>
+                  </div>
+                  <Link to="/forget-password">Forget Password?</Link>
+                </div>
 
-              <div className="text-right">
-                <Button
-                  id="LoginBtn"
-                  onClick={this.onSubmit}
-                >Sign In</Button>
-              </div>
+                <div className="text-right">
+                  <Button
+                    id="LoginBtn"
+                    onClick={this.onSubmit}
+                  >Sign In</Button>
+                </div>
               </form>
             </div>
 

@@ -1,6 +1,6 @@
 {
   "presets": [
-    "es2015",
+    "es2015"
   ],
   "plugins": [
     "transform-async-to-generator",
@@ -8,7 +8,7 @@
       "transform-runtime",
       {
         "helpers": false,
-        "polyfill": false,
+        "polyfill": false
       }
     ],
     "transform-object-rest-spread",
@@ -23,7 +23,7 @@
         "alias": {
           "@util": "./server/app/utility",
           "@mid": "./server/app/middlewares",
-          "@mod": "./server/app/modules",
+          "@mod": "./server/app/modules"
         }
       }
     ]

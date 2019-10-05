@@ -2,29 +2,29 @@ import BaseAPI from "./BaseAPI"
 import store from "../../app/redux";
 
 export class RestAPI extends BaseAPI {
-    get = (url, token = store.getState().auth.token) => {
-        let accessToken = 'token ' + token;
-        if (token) return this.callAPI(url, 'get', {}, { headers: { Authorization: accessToken } })
-        else return this.callAPI(url, 'get');
-    }
+  get = (url, token = store.getState().auth.token) => {
+    let accessToken = 'token ' + token;
+    if (token) return this.callAPI(url, 'get', {}, { headers: { Authorization: accessToken } })
+    else return this.callAPI(url, 'get');
+  }
 
-    put = (url, payload, token = store.getState().auth.token) => {
-        let accessToken = 'token ' + token;
-        if (token) return this.callAPI(url, 'put', payload, { headers: { Authorization: accessToken } })
-        else return this.callAPI(url, 'put', payload);
-    }
+  put = (url, payload, token = store.getState().auth.token) => {
+    let accessToken = 'token ' + token;
+    if (token) return this.callAPI(url, 'put', payload, { headers: { Authorization: accessToken } })
+    else return this.callAPI(url, 'put', payload);
+  }
 
-    post = (url, payload, token = store.getState().auth.token) => {
-        let accessToken = 'token ' + token;
-        if (token) return this.callAPI(url, 'post', payload, { headers: { Authorization: accessToken } })
-        else return this.callAPI(url, 'post', payload);
-    }
+  post = (url, payload, token = store.getState().auth.token) => {
+    let accessToken = 'token ' + token;
+    if (token) return this.callAPI(url, 'post', payload, { headers: { Authorization: accessToken } })
+    else return this.callAPI(url, 'post', payload);
+  }
 
-    delete = (url, token = store.getState().auth.token) => {
-        let accessToken = 'token ' + token;
-        if (token) return this.callAPI(url, 'delete', {}, { headers: { Authorization: accessToken } })
-        else return this.callAPI(url, 'delete');
-    }
+  delete = (url, token = store.getState().auth.token) => {
+    let accessToken = 'token ' + token;
+    if (token) return this.callAPI(url, 'delete', {}, { headers: { Authorization: accessToken } })
+    else return this.callAPI(url, 'delete');
+  }
 }
 
 export const api = new RestAPI();

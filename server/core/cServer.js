@@ -13,11 +13,11 @@ cMiddleware(app);
 // Api Router
 app.use(cRoutes);
 
+
+
 export const publicPath = path.join(__dirname, '../../build');
-export const staticPath = path.join(__dirname, '../../static');
 // Public Folder
-app.use('/', express.static(publicPath));
-app.use('/static', express.static(staticPath));
+app.use(express.static(publicPath));
 app.use(fallback('index.html', { root: publicPath }));
 
 // Error Handling

@@ -11,7 +11,7 @@ import PrivateRoute from './PrivateRoute';
 
 import {
   Auth,
-  Private, 
+  Private,
   Public
 } from './Router';
 import { NotFound } from '../components';
@@ -25,30 +25,30 @@ class RouterConfig extends Component {
   render() {
     return (
       <div>
-         <Router history={history}>
-            <div className="pt-5 mt-4">
-            <Header/>
-              <Switch>
-                {
-                  Public.map((R, k) => {
-                    return <Route key={k} path={R.path} component={R.component} exact={R.exact}/>
-                  })
-                }
-                {
-                  Private.map((R, k) => {
-                    return <PrivateRoute key={k} path={R.path} component={R.component} exact={R.exact}/>
-                  })
-                }
-                {
-                  Auth.map((R, k) => {
-                    return <AuthRoute key={k} path={R.path} component={R.component} exact={R.exact}/>
-                  })
-                }
-                <Route component={NotFound}/>
-              </Switch>
-              <Footer />
-            </div>
-          </Router>
+        <Router history={history}>
+          <div className="pt-5 mt-4">
+            <Header />
+            <Switch>
+              {
+                Public.map((R, k) => {
+                  return <Route key={k} path={R.path} component={R.component} exact={R.exact} />
+                })
+              }
+              {
+                Private.map((R, k) => {
+                  return <PrivateRoute key={k} path={R.path} component={R.component} exact={R.exact} />
+                })
+              }
+              {
+                Auth.map((R, k) => {
+                  return <AuthRoute key={k} path={R.path} component={R.component} exact={R.exact} />
+                })
+              }
+              <Route component={NotFound} />
+            </Switch>
+            <Footer />
+          </div>
+        </Router>
       </div>
     )
   }
