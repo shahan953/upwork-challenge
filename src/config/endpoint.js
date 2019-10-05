@@ -1,5 +1,5 @@
 // const url = 'https://www.dealstryker.com';
-const url = 'http://localhost:5000';
+const url = process.env.REACT_APP_API_ENDPOINT;
 
 export const baseURL = url + '/api';
 export const endpoint = {
