@@ -3,16 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hapi/joi": "^15.1.1",
     "antd": "^3.17.0",
     "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
+    "cities.json": "^1.1.5",
+    "compression": "^1.7.4",
+    "config": "^3.2.3",
+    "cors": "^2.8.5",
+    "cross-env": "^6.0.3",
     "express": "^4.16.4",
+    "express-history-api-fallback": "^2.2.1",
+    "express-promise-router": "^3.0.3",
     "font-awesome": "^4.7.0",
+    "helmet": "^3.21.1",
     "history": "^4.9.0",
     "joi-browser": "^13.4.0",
     "jquery": "^3.4.1",
+    "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
+    "mongoose": "^5.7.3",
+    "mongoose-timestamp": "^0.6.0",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.6.0",
     "nuka-carousel": "^4.5.6",
     "react": "^16.8.6",
     "react-alice-carousel": "^1.13.11",
@@ -25,14 +42,19 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "shelljs": "^0.8.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "cross-env NODE_ENV=production node bin/prod.js",
+    "dev": "cross-env NODE_ENV=development nodemon bin/dev.js",
+    "client": "react-scripts start",
+    "prebuild": "rimraf dist build",
+    "build": "node bin/build.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "serve -s build -l 3001"
+    "predeploy": "npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,7 +73,19 @@
   },
   "homepage": "https://shahan953.github.io/deal-stryker",
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
     "node-sass": "^4.12.0",
+    "nodemon": "^1.19.3",
     "serve": "^11.0.0"
   }
 }

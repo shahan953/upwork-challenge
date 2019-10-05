@@ -1,7 +1,7 @@
 html, body{
     margin: 0px;
     padding: 0px;
-    background-color: #fff;;
+    background: url('/images/earth.jpg');
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -51,7 +51,7 @@ a{
 }
 .bg-nav{
     background-color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 5px 1px #ddd;
 }
 .navbar-expand-lg{
     padding: 0.5rem 1rem !important;
@@ -196,129 +196,21 @@ a{
 .nav-link:hover{
     border:none;
 }
-.close{
-    width: 20px;
-    float: right;
-    margin-right: 5px;
-}
-.nav-link {
-    display: block;
-    padding: 0.5rem 2.13rem;
-    font-size: 18px;
-}
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: $white;
-    outline: none;
-}
-.check-btn{
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-}
-.fsb{
-    width: 100%;
-}
-.forget-pass{
-    text-decoration: none;
-    color: #000;
-}
-.forget-pass:hover{
-    text-decoration: none;
-}
-.input-check input{
-    margin-right: 5px;
-}
-.fr{float: right;}
-.step-2{
-    font-size: 18px;
+
+.home-section-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-//progess bar
-.progessbar-container{
-    width: 100%;
-    overflow: hidden;
-    margin-top: 40px;
-}
-.progessbar{
-    counter-reset: step;
-    padding: 0;
-    overflow: hidden;
-    width: 50%;
-    padding: 55px 0 0;
-    margin: 0 auto;
-}
-.progessbar li{
-    list-style-type: none;
-    float: left;
-    width: 50%;
-    position: relative;
-    text-align: center;
-    margin: 0 auto 10px auto;
-    font-size: 18px;
-}
-.progessbar li::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #ddd;
-    top: -34px;
-    left: -50%;
-   
-}
-.progessbar li::after{
-    position: absolute;
-    content: counter(step);
-    counter-increment: step;
-    width: 35px;
-    height: 35px;
-    border: 2px solid #ddd;
-    display: block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 auto 10px auto;
-    line-height: 30px;
-    background-color: #fff;
-    left: 38%;
-    top: -50px;
-    z-index: 1;
-}
-.progessbar li:first-child::before{
-    content: none;
-}
-.progessbar li.active{
-    color: rgba(99, 99, 253, 0.966);;
-}
-.progessbar li.active::before{
-    background: rgba(99, 99, 253, 0.966);
-}
-li.active::after {
-    background: #8a8aff;
-    color: white;
-}
-.dealer-container{
-    width: 50%;
-    margin: auto;
-}
-.progessbar li.active-before::before{
-    background: #8a8aff;
+.weather-ui{
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    min-height: 300px;
+
 }
 
-button{
-    background-color: transparent;
-    border: none;
-    outline: none;
+.weather-ui * {
+    color: white
 }
-.de-modal-footer{
-    padding: 1rem 0;
-    border: none;
-}
-.de-submit{
-    margin: 30px 0 100px;
-}
-.ant-select-selection{
-    border-color: #8a8aff !important;
-    border-radius: 0 !important;
-}
-
-.go-color{}

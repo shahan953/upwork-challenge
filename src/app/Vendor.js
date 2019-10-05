@@ -1,6 +1,6 @@
 import React from 'react';
-import './styles/style.scss';
 import "antd/dist/antd.css";
+import './styles/style.scss';
 
 
 class Vendor extends React.Component {

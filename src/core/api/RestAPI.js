@@ -1,5 +1,5 @@
 import BaseAPI from "./BaseAPI"
-import store from "../store";
+import store from "../../app/redux";
 
 export class RestAPI extends BaseAPI {
     get = (url, token = store.getState().auth.token) => {
@@ -28,4 +28,3 @@ export class RestAPI extends BaseAPI {
 }
 
 export const api = new RestAPI();
-

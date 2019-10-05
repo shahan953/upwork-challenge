@@ -8,7 +8,6 @@ export const saveState = (state) => {
     // Saving auth Data to localStorage
     let rawState = JSON.stringify({
       auth: stateFilter.auth,
-      settings: stateFilter.settings || {}
     });
 
     localStorage.setItem(StoreKey, rawState)

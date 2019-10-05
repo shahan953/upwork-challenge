@@ -1,1 +1,1 @@
-export * from './RestAPI'
+export { api as default } from './RestAPI'

@@ -1,0 +1,1 @@
+export { routers as adminRouters } from './route';

@@ -1,0 +1,31 @@
+{
+  "presets": [
+    "es2015",
+  ],
+  "plugins": [
+    "transform-async-to-generator",
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+      }
+    ],
+    "transform-object-rest-spread",
+    "syntax-dynamic-import",
+    "transform-object-assign",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./server"
+        ],
+        "alias": {
+          "@util": "./server/app/utility",
+          "@mid": "./server/app/middlewares",
+          "@mod": "./server/app/modules",
+        }
+      }
+    ]
+  ]
+}
