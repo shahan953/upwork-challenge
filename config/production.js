@@ -4,13 +4,13 @@ module.exports = {
     port: process.env.PORT || 5000
   },
   db: {
-    host: '127.0.0.1',
-    dbname: 'test',
+    host: process.env.DB_HOST,
+    dbname: process.env.DB_NAME,
     debug: false,
     options: {
-      username: null,
-      password: null,
-      port: 27017
+      username: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      port: process.env.DB_PORT
     }
   },
   secret: process.env.SECRET_KEY,
